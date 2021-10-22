@@ -31,6 +31,7 @@ function Checkout(props) {
            
             })
         }) 
+        setCartItems([])
     }
     
     // Return 
@@ -62,7 +63,7 @@ function Checkout(props) {
                 </label>
             </div>
             <div>
-            <button className='clasico' type="submit">Comprar</button>
+            { cartItems.length>0 && <button className='clasico' type="submit">Comprar</button>}
             </div>
             </form>
             <div className='compra_end'>
